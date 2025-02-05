@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <div className='step_1'>
-        <span>Ingresa el código de tu pulsera.</span>
+        <span>Ingresa el código de tu pulsera/llavero.</span>
           <div className="card">
             <input type='text' name="c1" className='input' maxLength={1}></input>
             <input type='text' name="c2" className='input' maxLength={1}></input>
