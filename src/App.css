@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 }
+
+.input {
+  padding: 10px;
+  max-width: 20px;
+  margin: 2px;
+  font-size: 20px;
+  text-transform: lowercase;
+  text-align: center;
+}
