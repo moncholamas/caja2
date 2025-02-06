@@ -38,7 +38,6 @@ function App() {
   
   const mostrar = () => {
     let secretKey =  Object.values(formData).join('')
-    console.log(secretKey)
     try {
       const decryptedText = decryptText(encryptedMsg, secretKey);
       
