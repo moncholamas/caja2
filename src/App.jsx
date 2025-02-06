@@ -70,8 +70,9 @@ function App() {
     <>
       {step ===1 && <div className='step_1'>
         <div className="card">
+        <span className='aclaracion'> por el momento solo vas a poder ingresar con una compu </span>
         <p>
-          Cómo soy un programador honesto (despues de ser un bachero despedido), este pequeño programita no recopila datos, así que no sé quién entró, si fuiste vos o alguien más.
+          Como soy un programador honesto (despues de ser un bachero despedido), este pequeño programita no recopila datos, así que no sé quién entró, si fuiste vos o alguien más.
         </p>
         <span>Esto solo lo vas a poder ver si: </span>
         <div className='container_list'>

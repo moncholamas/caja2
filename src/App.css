@@ -89,3 +89,9 @@ h1{
     30% 7%, 25% 13%, 20% 8%, 15% 12%, 10% 7%, 5% 10%, 0% 5%
 );
 }
+
+.aclaracion{
+  font-size: 12px;
+  font-weight: bold;
+  color: #ce4949;
+}
