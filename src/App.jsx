@@ -3,7 +3,7 @@ import './App.css'
 import CryptoJS from 'crypto-js';
 
 function App() {
-  const encryptedMsg = 'U2FsdGVkX18cbbMp+aXFAiRZPzRzTfNwmDdt8dPI7171oIMynylQ2v8sOAsACqQKkIOECNNeculSHhKKbXfvreI6r2hFQc/7utpkyqTGlEfnjioRz4Lv5emBiVmHjuLpkoJID55yBFLOsvBppVaYtSjC4+wN09RoXSg3KKPdWu3k5JNP+frr1BSz7S054tSMxSKETMYsFInUUxdUCHZqMI097FJwvGhDxxrrv1N1At2lNPgNkC2K1dfcoyaQe7iV9WamL45sOxoTpj16fis/5NUQ1Frs+wotLLbuts0Gq8p65nMCeDGW+41TK6PB21u7wTdS0slhQ9PfELb6dF8nTrDfEPOC7XK0U5QgqaVHtg/Yle/qeTlcGtgYejU2LMEkigkEOBiCVd+yiTLHZMLxbVwWkwmR2MJwau9h4vNzxLR049+I5QDmWY0eGDHqZDRhvrp2oDZ/ERh2cUMj08Y2myK72NlXgqtZri7Tjxto5TcYpJD98s0Ar3P7Y0S+rkPuGAkmFM/gUlhwHNs+HODR0PGmv6ahinjxrY86u5+oLezRVUJ4caavaqruXah7MBYRVGuYGc78ENi08bpoh3yLlK0vEVrmWHbGZkypS46WVvUhnf6KwL3wEIQJNthJ7xE/hcety9Y+og0TSGEjFhzfnZc/ymV9XNrz5nwLj6MZt4Hsb4z9FKRVlJ3/A9MQt4eqzw/k1dRtZP4J3c5DTu+E0HPBURU6nMC49MzRifRdYJ3sJV8htGy7G3NMxyULhU0MTqer4mTczwNnX+GJ4pMD/A=='
+  const encryptedMsg = 'U2FsdGVkX18jcmxLEIzjw2oK3vZw3HCgemi/DjSu1XQGcUUgX0f9JXIMKPbJN9dEPqEmkVG0G4YjCwYFNuoDecsi1plTLuoQXInL2wH7D3PyAbh5Bj9MiADvJLIayLXl0spUQLf6ZG1FiJvgN3oLSbXwBm6xMZTTI8x4i27r2UGBid8K7BNrBGNLsfe3G9/Os9N4HjrPrkof9MW0vvW30LW8VpJbiqwWgEYFZXNNK/9ZSJFZ6eSm1c2SzIlx5mXy44AJ04MHFz72Q7K2Ra6pbOvvjVNwFFVl2XXPjJT77EVz+qYstkyhx0kQUgEQBJ+Q+OZe9jpgD1o0cdLywfspCGvnDRLpaGBfEYDl4K2qjEPV3iUwC+a3uX/f9+G+pOsbeJiNlRiskbicZohYGfJ85NHTyC3MPS/QtFbRxAzpWawbgqH5gtR/hML9VFE9hHyKktaeXzyLEr4eYzDFx7sL/zWrDQXuFOxdxKgxOK0aRNnlgM5HvGiFHW4AJuettc6lxV2zvkVlQfmmhJ6wXJBrFq8oJcXJLfRIFfic8WNsw1nShTY3LcKLTYnlAVItxEfjnDboFvFJfqVaOs4YharqtGSMzYg2soXRwbib30BBQEyoPTg2zG/raCDVHSazJpYZjXCwEdmouftYA8UlDDkCEU+KzLEfzxIu1mO8orrfzhpCzULhFz79KXXrb4ouu1lYsHjgU4urPXHvzFm6WGjt/zZETf+D1/1QIKuVNNpcYsxi212fZM53KjM49IidJFVLKHTkTGtfTylLKT91DB/3Rg=='
 
   const [error, setError] = useState(false)
   const [step, setStep] = useState(1)
@@ -37,7 +37,7 @@ function App() {
 
   
   const mostrar = () => {
-    let secretKey =  Object.values(formData).toString()
+    let secretKey =  Object.values(formData).join('')
     console.log(secretKey)
     try {
       const decryptedText = decryptText(encryptedMsg, secretKey);
@@ -92,7 +92,7 @@ function App() {
         </div>
         <div className="card con_fondo">
             {
-              Array.from(Array(9).keys()).map( num => {
+              [1,2,3,4,5,6,7,8,9].map( num => {
                 return(
                   <>
                     <input 
@@ -102,7 +102,7 @@ function App() {
                       onChange={handleChange}
                       maxLength={1}>
                     </input>
-                    {[2,5].includes(num) && <span> - </span> }
+                    {[3,6].includes(num) && <span> - </span> }
                   </>
                 )
               })
